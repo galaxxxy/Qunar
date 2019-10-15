@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import HomeHeader from '../components/Home/HomeHeader'
+import HomeHeader from '../components/Home/Header'
 import HomeSwiper from '../components/Home/Swiper'
 import HomeIcons from '../components/Home/Icons'
 import HomeRecommend from '../components/Home/Recommend'
