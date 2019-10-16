@@ -5,7 +5,10 @@
         <div class="title">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{currentCity}}</div>
+            <div
+              class="button"
+              @click="handleCityClick(currentCity)"
+            >{{currentCity}}</div>
           </div>
         </div>
       </div>
