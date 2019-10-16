@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './sotre/index.js'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
@@ -16,5 +17,6 @@ Vue.prototype.$ajax = axios
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
