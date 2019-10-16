@@ -38,8 +38,7 @@ export default {
     text-indent: .2rem
   .item-wrapper
     overflow: hidden
-    height: 0
-    padding-bottom: 114.5%
+    height: 9.5rem
     .item
       overflow: hidden
       display: flex
