@@ -7,6 +7,7 @@ module.exports = {
   chainWebpack: (config) => {
     config.resolve.alias
       .set('@styles', resolve('src/assets/styles'))
+      .set('@common', resolve('src/components/Common'))
   },
   devServer: {
     proxy: {

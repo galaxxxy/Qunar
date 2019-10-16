@@ -1,21 +1,45 @@
 <template>
-  <div class="banner">
-    <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" />
-    <div class="banner-info">
-      <div class="banner-title">
-        大连圣亚海洋世界(AAAA景区)
-      </div>
-      <div class="banner-number">
-        <span class="iconfont banner-icon">&#xe692;</span>
-        39
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img
+        class="banner-img"
+        src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" />
+      <div class="banner-info">
+        <div class="banner-title">
+          大连圣亚海洋世界(AAAA景区)
+        </div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe692;</span>
+          39
+        </div>
       </div>
     </div>
+    <common-gallery
+      :imgs="imgs"
+      v-show="showGallery"
+      @close="handleBannerClick"
+    ></common-gallery>
   </div>
 </template>
 
 <script>
+import CommonGallery from '@common/Gallery'
 export default {
-  name: 'DerailBanner'
+  name: 'DerailBanner',
+  data () {
+    return {
+      imgs: ['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg', 'http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png'],
+      showGallery: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallery = !this.showGallery
+    }
+  },
+  components: {
+    CommonGallery
+  }
 }
 </script>
 
@@ -35,7 +59,7 @@ export default {
       bottom: 0
       line-height: .6rem
       color: #ffffff
-      background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8))
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8))
       .banner-title
         font-size: .32rem
         padding: 0 .2rem
