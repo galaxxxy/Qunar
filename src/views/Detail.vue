@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      this.$ajax.get('/api/detail.json', {
+      this.$ajax.get('./api/detail.json', {
         params: {
           id: this.$route.params.id
         }

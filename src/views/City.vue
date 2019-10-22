@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      this.$ajax.get('/api/city.json')
+      this.$ajax.get('./api/city.json')
         .then(this.handleGetCityInfo)
     },
     handleGetCityInfo (res) {

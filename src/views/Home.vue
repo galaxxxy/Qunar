@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      this.$ajax.get('api/index.json?city=' + this.city)
+      this.$ajax.get('./api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
