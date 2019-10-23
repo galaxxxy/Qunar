@@ -1,8 +1,8 @@
 <template>
   <div class="list" ref="wrapper">
     <div>
-      <div class="area border-topbottom">
-        <div class="title">当前城市</div>
+      <div class="area">
+        <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
             <div
@@ -12,8 +12,8 @@
           </div>
         </div>
       </div>
-      <div class="area border-topbottom">
-        <div class="title">热门城市</div>
+      <div class="area">
+        <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
           <div
             class="button-wrapper"

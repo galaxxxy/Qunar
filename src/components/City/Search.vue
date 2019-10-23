@@ -66,7 +66,7 @@ export default {
         const result = []
         for (let i in this.cities) {
           this.cities[i].forEach(value => {
-            if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
+            if (value.spell.indexOf(this.keyword.toLowerCase()) > -1 || value.name.indexOf(this.keyword) > -1) {
               result.push(value)
             }
           })
@@ -77,6 +77,9 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs['search'])
+  },
+  deactivated () {
+    this.keyword = ''
   }
 }
 </script>
